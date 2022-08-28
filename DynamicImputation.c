@@ -33,6 +33,8 @@ var PMO_Date = if(
 return
     DATEDIFF([Date Standstill Period Ends],PMO_Date, DAY)
 
+Closed Over 30 Days = CALCULATE(countrows('30DayKPI'), '30DayKPI'[Status] = "Closed Over 30 Days")
+
 
 
 
