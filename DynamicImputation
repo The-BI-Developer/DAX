@@ -20,3 +20,20 @@ return
     FinalCalc
 
        
+       
+Number of Days from Standstill to PMO Close = 
+
+
+/*If PMO date is blank then use today's value otherwise use default value */
+var PMO_Date = if(
+    isblank('30DayKPI'[PMO closed down date]), 
+    today(),
+    '30DayKPI'[PMO closed down date]
+)
+return
+    DATEDIFF([Date Standstill Period Ends],PMO_Date, DAY)
+
+
+
+
+
